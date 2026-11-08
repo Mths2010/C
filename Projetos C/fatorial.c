@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define MAX 100
 
 float EncontrarMaior(float v[], int tam) {
     float maior = v[0];
@@ -40,7 +41,7 @@ float EncontrarMedia(float v[], int tam) {
 int main(void) {
     int opcao = -1;
     int n = 0;
-    float numeros[100];
+    float numeros[MAX];
 
     while (opcao != 0) {
         printf("\n=== MENU ===\n");
@@ -57,7 +58,7 @@ int main(void) {
             printf("Quantos Números? "); // quantos números a pessoa digitará
             scanf("%d", &n);
 
-            while (n < 1 || n > 100) {
+            while (n < 1 || n > MAX) {
                 printf("Valor inválido, tente de novo: ");
                 scanf("%d", &n);
             }
